@@ -14,12 +14,13 @@ const About = () => {
         <div className="flex items-end grid-default-color grid-1 ">
           <img
             src="assets/coding-pov.png"
+          alt="Saad working on code"
             className="absolute scale-[1.75] -right-20 -top-4 md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
-            <p className="headtext ">Hi, I'm Saad Ansari</p>
-            <p className="subtext">
-              A fresher in fullstack but ready for any challenges
+            <p className="headtext">Developer focused on useful experiences</p>
+            <p className="subtext max-w-sm">
+              I build responsive web applications with clean interfaces, practical features, and maintainable code.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-linear-to-t from-indigo" />
@@ -30,7 +31,7 @@ const About = () => {
             ref={grid2Container}
             className="flex items-center justify-center w-full h-full"
           >
-            <p className="flex items-end text-5xl text-gray-500 ">
+            <p className="flex items-end text-center text-3xl md:text-4xl text-gray-500">
               CODE IS CRAFT
             </p>
             <Card
@@ -64,9 +65,9 @@ const About = () => {
         {/* Grid 3 */}
         <div className="grid-black-color grid-3">
           <div className="z-10 w-[50%]">
-            <p className="headtext">Time Zone</p>
+            <p className="headtext">Location</p>
             <p className="subtext">
-              I'm based in Moon, and open to remote work worldwide
+              Based in India and open to remote opportunities worldwide
             </p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
@@ -85,7 +86,7 @@ const About = () => {
           {/* Grid 5 */}
         <div className="grid-default-color grid-5">
           <div className="z-10 w-[50%]">
-            <p className="headText">Teck Stack</p>
+            <p className="headText">Tech Stack</p>
             <p className="subtext">
               I specialize in a variety of languages, frameworks, and tools that
               allow me to build modern and scalable applications

@@ -1,28 +1,33 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-function Navigation() {
+function Navigation({ onNavigate }) {
   
  
   return (
     
     ( <ul className="nav-ul">
       <li className="nav-li">
-        <a className="nav-link" href="#home" >
+        <a className="nav-link" href="#home" onClick={onNavigate}>
         Home
         </a>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#about" >
+        <a className="nav-link" href="#about" onClick={onNavigate}>
           About
         </a>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#work">
+        <a className="nav-link" href="#work" onClick={onNavigate}>
           Projects
         </a>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#contact">
+        <a className="nav-link" href="#skills" onClick={onNavigate}>
+          Skills
+        </a>
+      </li>
+      <li className="nav-li">
+        <a className="nav-link" href="#contact" onClick={onNavigate}>
           Contact
         </a>
       </li>
@@ -35,14 +40,14 @@ function Navigation() {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-#0F121A">
+    <div className="fixed inset-x-0 top-0 z-20 w-full border-b border-white/6 bg-[#0B0D12]/85 backdrop-blur-xl">
       <div className="mx-auto c-space max-w-7xl">
-        <div className="flex items-center justify-between py-2 sm:py-0">
+        <div className="flex min-h-16 items-center justify-between">
           <a
-            href="/"
-            className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
+            href="#home"
+            className="font-[Space_Grotesk] text-lg font-bold text-white transition-colors hover:text-[#e7d7b1]"
           >
-            Saad
+            Saad<span className="text-[#e7d7b1]">.</span>
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -61,14 +66,13 @@ const Navbar = () => {
       </div>
       {isOpen && (
         <motion.div
-          className="block overflow-hidden text-center sm:hidden"
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          style={{ maxHeight: "100vh" }}
-          transition={{ duration: 1 }}
+          className="border-t border-white/6 bg-[#0B0D12]/95 text-center backdrop-blur-xl sm:hidden"
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2 }}
         >
           <nav className="pb-5">
-            <Navigation />
+            <Navigation onNavigate={() => setIsOpen(false)} />
           </nav>
         </motion.div>
       )}
