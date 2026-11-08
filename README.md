@@ -22,5 +22,5 @@ npm run dev
 ```
 
 ## Contact
-LinkedIn: [Saad Ansari](https://www.linkedin.com/in/saad-ansari-3a863b401)
+LinkedIn: [Saad Ansari](https://www.linkedin.com/in/sn-ansari)
 GitHub: [@Saad2025-21](https://github.com/Saad2025-21)
